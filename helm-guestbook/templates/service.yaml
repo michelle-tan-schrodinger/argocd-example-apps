@@ -14,6 +14,9 @@ spec:
       targetPort: http
       protocol: TCP
       name: http
+    - port: 90
+      protocol: TCP
+      name: test
   selector:
     app: {{ template "helm-guestbook.name" . }}
     release: {{ .Release.Name }}
